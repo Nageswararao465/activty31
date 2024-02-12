@@ -11,8 +11,9 @@ def basic():
 def soil():
     value=request.args.get('soil')
     print(value)
+    value=int(value)
     response=predict_model(value)
-    return {'msg':response}
+    return {'msg':str(response)}
 
 
 if __name__=="__main__":
